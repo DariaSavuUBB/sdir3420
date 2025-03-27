@@ -2,7 +2,10 @@ package inventory.service;
 
 import inventory.model.*;
 import inventory.repository.InventoryRepository;
+import inventory.validation.PartValidator;
 import javafx.collections.ObservableList;
+
+import java.util.Objects;
 
 public class InventoryService {
 
@@ -13,15 +16,25 @@ public class InventoryService {
         this.repo = inventoryRepo;
     }
 
+    public InventoryService(String filename)
+    {
+        this.repo=new InventoryRepository(filename);
+    }
     public static InventoryService getInstance() {
         if (instance == null) {
             instance = new InventoryService(InventoryRepository.getInstance());
         }
         return instance;
     }
-    public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue){
-        InhousePart inhousePart = new InhousePart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
-        repo.addPart(inhousePart);
+    public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue) throws Exception {
+
+            String error=PartValidator.validate(name,price,inStock,min,max);
+            if(Objects.equals(error, ""))
+            {
+                InhousePart inhousePart = new InhousePart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);
+                repo.addPart(inhousePart);
+             }
+            else throw new Exception(error);
     }
     public void addOutsourcePart(String name, double price, int inStock, int min, int  max, String partDynamicValue){
         OutsourcedPart outsourcedPart = new OutsourcedPart(repo.getAutoPartId(), name, price, inStock, min, max, partDynamicValue);

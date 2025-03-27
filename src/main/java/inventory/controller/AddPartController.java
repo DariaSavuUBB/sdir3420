@@ -145,7 +145,7 @@ public class AddPartController implements Initializable, ControllerInterface {
      * @throws IOException
      */
     @FXML
-    void handleAddPartSave(ActionEvent event) throws IOException {
+    void handleAddPartSave(ActionEvent event) throws Exception {
         String name = nameTxt.getText();
         double price = Double.parseDouble(priceTxt.getText());
         int stock = Integer.parseInt(inventoryTxt.getText());

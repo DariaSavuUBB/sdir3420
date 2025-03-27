@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Proiect236 - sdir3420_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect236<br/>Test Suite: Proiect236 - sdir3420_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 27/03/2025</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.sdir3420_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc24149">Prj236-1: AdaugarePiesaValidaECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc24228">Prj236-6: AdaugarePiesaNevalidaECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc24230">Prj236-7: AdaugarePiesaValidaBVA</a></p><p style="padding-left: 45px;"><a href="#toc_tc24232">Prj236-8: AdaugarePiesaNevalidaBVA</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 236.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : sdir3420_BBT</h1>
+<div><p>Se testeaza adaugarea unei parti sau unui produs finit</p>
+</div><a name="toc_tc24149"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-1: AdaugarePiesaValidaECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Piesa se adauga in inventar. Se respecta toate conditiile legate de nr de bucati minim si maxime, nr de bucati din stoc, denumire. Se stie dinainte daca este de tip inhouse sau outsourced.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Datele piesei sunt valide.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >AdaugarePiesaAutoTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >AdaugarePiesaTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">sdir3420_F01:  Adaugarea unei piese noi [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24228"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-6: AdaugarePiesaNevalidaECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testul validează comportamentul sistemului la introducerea unei piese cu date invalide, asigur&acirc;nd că aplicația gestionează corect erorile și nu permite adăugarea unei piese care nu respectă cerințele.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Datele piesei sunt invalide conform cerintelor</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >AdaugarePiesaNevalidaAutoTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >AdaugarePiesaNevalidaTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24230"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-7: AdaugarePiesaValidaBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se verifică dacă sistemul acceptă o piesă atunci c&acirc;nd valorile introduse sunt exact la limitele acceptate - numarul de bucati minime&nbsp;este egal cu nr maxim de bucati egal cu nr de bucati in stoc.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Sistemul este funcțional și utilizatorul are permisiuni pentru a adăuga piese.</p>
+
+<p>Datele piesei sunt corecte</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >AdaugarePiesaValidaAutoTestBVA</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >AdaugarePiesaValidaTestBVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24232"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-8: AdaugarePiesaNevalidaBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se verifică dacă sistemul respinge corect o piesă atunci c&acirc;nd valorile introduse sunt&nbsp;putin in afara limitelor- pretul unitar este egal cu 0</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Datele piesei sunt corecte in afara de pretul egal cu 0.</p>
+
+<p>Sistemul este functional si utilizatorul are treptul de a adauga piese.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >AdaugarePiesaNevalidaAutoTestBVA</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >AdaugarePiesaNevalidaTestBVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>

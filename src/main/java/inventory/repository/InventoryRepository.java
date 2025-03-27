@@ -14,7 +14,7 @@ import java.util.logging.Level;
 public class InventoryRepository {
 
 	Logger logger = Logger.getLogger(getClass().getName());
-	private static String filename = "data/items.txt";
+	private String filename = "data/items.txt";
 	private Inventory inventory;
 
 	private static InventoryRepository instance;
@@ -24,6 +24,11 @@ public class InventoryRepository {
 			instance = new InventoryRepository();
 		}
 		return instance;
+	}
+	public InventoryRepository(String filename)
+	{
+		this.filename=filename;
+		this.inventory=new Inventory();
 	}
 	private InventoryRepository(){
 		this.inventory=new Inventory();
