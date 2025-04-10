@@ -12,20 +12,16 @@ public class InventoryService {
     private static InventoryService instance;
     private final InventoryRepository repo;
 
-    private InventoryService(InventoryRepository inventoryRepo) {
+    public InventoryService(InventoryRepository inventoryRepo) {
         this.repo = inventoryRepo;
     }
 
     public InventoryService(String filename)
     {
-        this.repo=new InventoryRepository(filename);
+
+        this.repo=new InventoryRepository(new Inventory(),filename);
     }
-    public static InventoryService getInstance() {
-        if (instance == null) {
-            instance = new InventoryService(InventoryRepository.getInstance());
-        }
-        return instance;
-    }
+
     public void addInhousePart(String name, double price, int inStock, int min, int  max, int partDynamicValue) throws Exception {
 
             String error=PartValidator.validate(name,price,inStock,min,max);

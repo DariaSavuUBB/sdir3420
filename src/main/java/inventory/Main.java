@@ -1,5 +1,6 @@
 package inventory;
 
+import inventory.model.Inventory;
 import inventory.repository.InventoryRepository;
 import inventory.service.InventoryService;
 import inventory.controller.MainScreenController;
@@ -17,7 +18,8 @@ public class Main extends Application {
     Logger logger = Logger.getLogger(getClass().getName());
     @Override
     public void start(Stage stage) throws Exception {
-        InventoryService service = InventoryService.getInstance();
+        InventoryRepository repository=new InventoryRepository(new Inventory());
+        InventoryService service = new InventoryService(repository);
         logger.log(Level.INFO,()->service.getAllProducts().toString());
         logger.log(Level.INFO,()->service.getAllParts().toString());
         FXMLLoader loader= new FXMLLoader(getClass().getResource("/fxml/MainScreen.fxml"));

@@ -5,12 +5,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Inventory {
-    
+
     // Declare fields
-    private ObservableList<Product> products;
-    private ObservableList<Part> allParts;
-    private int autoPartId;
-    private int autoProductId;
+    public ObservableList<Product> products;
+    public ObservableList<Part> allParts;
+    public int autoPartId;
+    public int autoProductId;
     public Inventory(){
         this.products = FXCollections.observableArrayList();
         this.allParts= FXCollections.observableArrayList();

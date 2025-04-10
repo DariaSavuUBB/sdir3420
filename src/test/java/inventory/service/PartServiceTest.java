@@ -28,7 +28,9 @@ class PartServiceTest {
     @DisplayName("Should add part successfully when data is valid")
     @Tag("ValidCasePrice")
     void addValidPartStock(String name, double price, int inStock, int min, int max, int partDynamicValue) {
+        int length=service.getAllParts().size();
         assertDoesNotThrow(() -> service.addInhousePart(name, price, inStock, min, max, partDynamicValue));
+        assertTrue(length+1==service.getAllParts().size());
     }
 
     @ParameterizedTest

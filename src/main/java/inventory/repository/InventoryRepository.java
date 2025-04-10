@@ -13,25 +13,16 @@ import java.util.logging.Level;
 
 public class InventoryRepository {
 
-	Logger logger = Logger.getLogger(getClass().getName());
-	private String filename = "data/items.txt";
-	private Inventory inventory;
-
-	private static InventoryRepository instance;
-
-	public static InventoryRepository getInstance() {
-		if (instance == null) {
-			instance = new InventoryRepository();
-		}
-		return instance;
-	}
-	public InventoryRepository(String filename)
+	public Logger logger = Logger.getLogger(getClass().getName());
+	public String filename = "data/items.txt";
+	public Inventory inventory;
+	public InventoryRepository(Inventory inventory,String filename)
 	{
 		this.filename=filename;
-		this.inventory=new Inventory();
+		this.inventory=inventory;
 	}
-	private InventoryRepository(){
-		this.inventory=new Inventory();
+	public InventoryRepository(Inventory inventory){
+		this.inventory=inventory;
 		try {
 			readParts();
 			readProducts();
@@ -56,7 +47,7 @@ public class InventoryRepository {
 		inventory.setAllParts(listP);
 	}
 
-	private Part getPartFromString(String line){
+	public Part getPartFromString(String line){
 		Part item=null;
 		if (line==null|| line.equals("")) return null;
 		StringTokenizer st=new StringTokenizer(line, ",");
@@ -101,7 +92,7 @@ public class InventoryRepository {
         inventory.setProducts(listP);
 	}
 
-	private Product getProductFromString(String line){
+	public Product getProductFromString(String line){
 		Product product=null;
 		if (line==null|| line.equals("")) return null;
 		StringTokenizer st=new StringTokenizer(line, ",");
