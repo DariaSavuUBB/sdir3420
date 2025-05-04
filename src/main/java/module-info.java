@@ -1,19 +1,23 @@
 module inventory {
+    // JavaFX
     requires javafx.graphics;
     requires javafx.fxml;
     requires javafx.controls;
+
+    // Logging
     requires java.logging;
 
-    opens inventory.model to javafx.base, org.junit.platform.commons;
-    exports inventory.model;
-
-    opens inventory to javafx.fxml;
+    // === Pachete exportate ===
     exports inventory;
-
-    opens inventory.controller to javafx.fxml;
     exports inventory.controller;
-
+    exports inventory.model;
     exports inventory.service;
 
-    opens inventory.repository to org.junit.platform.commons;
+    // === Pachete deschise pentru JavaFX (reflectie) ===
+    opens inventory to javafx.fxml;
+    opens inventory.controller to javafx.fxml;
+
+    // === Pachete deschise pentru frameworkuri de testare (JUnit, Mockito etc.) ===
+    opens inventory.model;
+    opens inventory.repository;
 }
