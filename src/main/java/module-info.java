@@ -20,4 +20,5 @@ module inventory {
     // === Pachete deschise pentru frameworkuri de testare (JUnit, Mockito etc.) ===
     opens inventory.model;
     opens inventory.repository;
+    opens inventory.service;
 }
