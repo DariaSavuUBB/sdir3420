@@ -12,15 +12,17 @@
 <p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
 <div class="doc_title"><p>Test Specification</p></div>
 <div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect236<br/>Test Suite: Proiect236 - sdir3420_IntT</p></div>
-<div class="summary"><p id="printedby">Printed by TestLink on 10/04/2025</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 04/05/2025</p></div>
 <div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
 <h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.sdir3420_IntT</a></b></p>
-<p style="padding-left: 45px;"><a href="#toc_tc25578">Prj236-63: AddInhousePartAndRetrieve</a></p><p style="padding-left: 45px;"><a href="#toc_tc25580">Prj236-64: AddProductWithPart</a></p><p style="padding-left: 45px;"><a href="#toc_tc25582">Prj236-65: AddInhousePartAndProductIntegration</a></p></div><h1 class="doclevel" >Scope</h1>
+<p style="padding-left: 45px;"><a href="#toc_tc25578">Prj236-63: Test unitar E - InhousePart</a></p><p style="padding-left: 45px;"><a href="#toc_tc25580">Prj236-64: Integrare S + R</a></p><p style="padding-left: 45px;"><a href="#toc_tc25582">Prj236-65: Integrare completă S + R + E</a></p></div><h1 class="doclevel" >Scope</h1>
 <div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 236.</p></div>
  <br/><a name='toc_1'></a>
 <h1 class='doclevel'>1.Test Suite : sdir3420_IntT</h1>
-<div><p>Suita de teste pentru proiectul inventory, lab 4</p>
-</div><a name="toc_tc25578"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-63: AddInhousePartAndRetrieve&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<div><p><em>Suita pentru testarea integrării &icirc;n 3 pași: unitare și incremental top-down.</em></p>
+
+<p><em>Lab4, proiectul inventory</em></p>
+</div><a name="toc_tc25578"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-63: Test unitar E - InhousePart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
 <tr><td colspan="4"><span class="label">Summary:</span><br /><p>Acesta este primul pas al strategiei de integrare, &icirc;n care testăm unitățile individuale. &Icirc;n acest test, adăugăm o piesă de tip InhousePart și verificăm dacă a fost corect adăugată la lista pieselor. Acesta se concentrează pe testarea unitară pentru entitatea InhousePart și se asigură că piesele sunt corect gestionate de InventoryService.</p>
 
@@ -54,7 +56,7 @@
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
 </div>
-<a name="toc_tc25580"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-64: AddProductWithPart&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<a name="toc_tc25580"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-64: Integrare S + R&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
 <tr><td colspan="4"><span class="label">Summary:</span><br /><p>&Icirc;n acest pas al strategiei de integrare, testăm integrarea InventoryService (S) cu InventoryRepository (R). Adăugăm un produs și asociem o piesă cu acesta. Se verifică faptul că produsul este corect adăugat și că piesa asociată apare corect &icirc;n lista de piese asociate a produsului. Pentru InhousePart, folosim un mock pentru a izola comportamentul InventoryRepository.</p>
 
@@ -97,7 +99,7 @@
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
 </div>
-<a name="toc_tc25582"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-65: AddInhousePartAndProductIntegration&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<a name="toc_tc25582"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj236-65: Integrare completă S + R + E&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">sdir3420</td></tr>
 <tr><td colspan="4"><span class="label">Summary:</span><br /><p>Acesta este al treilea pas, &icirc;n care se testează integrarea completă &icirc;ntre entitățile E (InhousePart), R (InventoryRepository) și S (InventoryService). &Icirc;n acest test, adăugăm un InhousePart, iar ulterior creăm un Product și &icirc;l asociem cu piesa adăugată anterior. Acest test verifică interacțiunile &icirc;ntre toate componentele (entități, repository și service) și confirmă că toate sunt corect integrate.</p>
 
