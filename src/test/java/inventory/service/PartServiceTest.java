@@ -88,8 +88,8 @@ class PartServiceTest {
     }
 
     @Test
-    @DisplayName("Should throw exception when price is zero")
-    @Tag("InvalidCaseBVAPrice")
+//    @DisplayName("Should throw exception when price is zero")
+//    @Tag("InvalidCaseBVAPrice")
     void addPartWithZeroPrice() {
         Exception exception = assertThrows(Exception.class, () ->
                 service.addInhousePart("Part 1", 0, 10, 4, 10, 10));
