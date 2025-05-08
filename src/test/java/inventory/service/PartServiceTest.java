@@ -69,7 +69,7 @@ class PartServiceTest {
     @DisplayName("Should add part when price is at boundary (0.1)")
     @Tag("BVACasePrice")
     void addPartWithBoundaryPrice() {
-        assertDoesNotThrow(() -> service.addInhousePart("Part 1", 0.1, 10, 4, 10, 10));
+        assertDoesNotThrow(() -> service.addInhousePart("Part 1", 0.01, 10, 4, 10, 10));
     }
 
     @Test

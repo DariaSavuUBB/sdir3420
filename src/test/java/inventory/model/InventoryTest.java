@@ -39,7 +39,7 @@ class InventoryTest {
     }
     @Test
     void testLookupPartByName_NotFound_ReturnsNull() {
-        Part result = inventory.lookupPart("abc");
+        Part result = inventory.lookupPart("mar");
         assertNull(result);
     }
 
