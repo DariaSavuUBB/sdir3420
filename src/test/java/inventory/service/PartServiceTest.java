@@ -62,8 +62,6 @@ class PartServiceTest {
 //        assertEquals("Prețul trebuie să fie mai mare decât 0.\n", exception.getMessage());
 //    }
     @Test
-//    @DisplayName("Should throw exception when price is -5")
-//    @Tag("InvalidCaseNegativePrice")
     void addPartWithNegativePrice() {
         double invalidPrice = -5;
         Exception exception = assertThrows(Exception.class, () ->
@@ -81,15 +79,11 @@ class PartServiceTest {
     }
 
     @Test
-//    @DisplayName("Should add part when price is at boundary (0.1)")
-//    @Tag("BVACasePrice")
     void addPartWithBoundaryPrice() {
         assertDoesNotThrow(() -> service.addInhousePart("Part 1", 0.01, 10, 4, 10, 10));
     }
 
     @Test
-//    @DisplayName("Should throw exception when price is zero")
-//    @Tag("InvalidCaseBVAPrice")
     void addPartWithZeroPrice() {
         Exception exception = assertThrows(Exception.class, () ->
                 service.addInhousePart("Part 1", 0, 10, 4, 10, 10));
