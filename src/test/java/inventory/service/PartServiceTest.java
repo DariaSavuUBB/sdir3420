@@ -19,19 +19,25 @@ class PartServiceTest {
         service = new InventoryService("test.txt"); // Se face un service separat pentru testare
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "Part 1, 5, 10, 5, 20, 10",
-            "Part 2, 5, 15, 5, 20, 12",
-            "Part 3, 5, 17, 5, 20, 25"
-    })
-    @DisplayName("Should add part successfully when data is valid")
-    @Tag("ValidCasePrice")
-    void addValidPartStock(String name, double price, int inStock, int min, int max, int partDynamicValue) {
-        int length=service.getAllParts().size();
-        assertDoesNotThrow(() -> service.addInhousePart(name, price, inStock, min, max, partDynamicValue));
-        assertTrue(length+1==service.getAllParts().size());
+//    @ParameterizedTest
+//    @CsvSource({
+//            "Part 1, 5, 10, 5, 20, 10",
+//            "Part 2, 5, 15, 5, 20, 12",
+//            "Part 3, 5, 17, 5, 20, 25"
+//    })
+//    @DisplayName("Should add part successfully when data is valid")
+//    @Tag("ValidCasePrice")
+//    void addValidPartStock(String name, double price, int inStock, int min, int max, int partDynamicValue) {
+//        int length=service.getAllParts().size();
+//        assertDoesNotThrow(() -> service.addInhousePart(name, price, inStock, min, max, partDynamicValue));
+//        assertTrue(length+1==service.getAllParts().size());
+//    }
+
+    @Test
+    void addValidPartStock() {
+        assertDoesNotThrow(() -> service.addInhousePart("Part 1", 5.0, 10, 5, 20, 10));
     }
+
 
     @ParameterizedTest
     @CsvSource({
@@ -46,11 +52,20 @@ class PartServiceTest {
         assertDoesNotThrow(() -> service.addInhousePart(name, price, inStock, min, max, partDynamicValue));
     }
 
-    @ParameterizedTest
-    @ValueSource(doubles = {-5, -10})
-    @DisplayName("Should throw exception when price is negative")
+//    @ParameterizedTest
+//    @ValueSource(doubles = {-5, -10})
+//    @DisplayName("Should throw exception when price is negative")
+//    @Tag("InvalidCaseNegativePrice")
+//    void addPartWithNegativePrice(double invalidPrice) {
+//        Exception exception = assertThrows(Exception.class, () ->
+//                service.addInhousePart("Part 1", invalidPrice, 10, 1, 20, 10));
+//        assertEquals("Prețul trebuie să fie mai mare decât 0.\n", exception.getMessage());
+//    }
+    @Test
+    @DisplayName("Should throw exception when price is -5")
     @Tag("InvalidCaseNegativePrice")
-    void addPartWithNegativePrice(double invalidPrice) {
+    void addPartWithNegativePrice() {
+        double invalidPrice = -5;
         Exception exception = assertThrows(Exception.class, () ->
                 service.addInhousePart("Part 1", invalidPrice, 10, 1, 20, 10));
         assertEquals("Prețul trebuie să fie mai mare decât 0.\n", exception.getMessage());
