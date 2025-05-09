@@ -20,7 +20,6 @@ class InventoryRepositoryTest {
 
     @BeforeEach
     void setup() {
-
         mockInventory = mock(Inventory.class);
         ObservableList<Part> mockPartsList = FXCollections.observableArrayList();
         ObservableList<Product> mockProductList = FXCollections.observableArrayList();
