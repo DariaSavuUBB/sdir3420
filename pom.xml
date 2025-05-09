@@ -114,9 +114,11 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.1</version>
-        <configuration>
-          <!--                <failIfNoTests>false</failIfNoTests>-->
-        </configuration>
+          <configuration>
+            <includes>
+              <include>**/*Test.java</include>
+            </includes>
+          </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
